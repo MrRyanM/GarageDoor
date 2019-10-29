@@ -2,7 +2,7 @@ import RPi.GPIO as GPIO
 import time
 from flask import Flask, render_template, request
 app = Flask(__name__)
-button = 40
+open = 40
 GPIO.setmode(GPIO.BOARD)
 
 @app.route("/")
@@ -10,9 +10,9 @@ def index():
    return render_template('index.html')
 @app.route("/<deviceName>/")
 def action(deviceName):
-    if deviceName != 'pressed':
-        if deviceName == 'button':
-            relay = button
+    if deviceName != 'close':
+        if deviceName == 'open':
+            relay = open
         GPIO.setmode(GPIO.BOARD)
         GPIO.setup(relay, GPIO.OUT)
         GPIO.output(relay, GPIO.LOW)
