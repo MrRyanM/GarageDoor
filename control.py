@@ -11,7 +11,7 @@ def index():
 @app.route("/<deviceName>/")
 def action(deviceName):
     if deviceName == 'button':
-         relay = button
+        relay = button
     GPIO.setmode(GPIO.BOARD)
     GPIO.setup(relay, GPIO.OUT)
     GPIO.output(relay, GPIO.LOW)
