@@ -1,15 +1,19 @@
 body {
-   background: black;
-   color: white;
+	background-color: #414141;
+	color: white;
 }
+
 .button {
-  font: bold 25px "Trebuchet MS";
-  text-decoration: none;
-  background-color: #EEEEEE;
-  color: #333333;
-  padding: 2px 6px 2px 6px;
-  border-top: 1px solid #CCCCCC;
-  border-right: 1px solid #333333;
-  border-bottom: 1px solid #333333;
-  border-left: 1px solid #CCCCCC;
+	font: bold 25px "Trebuchet MS";
+	text-decoration: none;
+	background-color: #808080;
+	color: #000000;
+	padding: 25px 25px 25px 25px;
+	border: none;
+	border-radius: 100px 100px 100px 100px;
+	box-shadow: 5px 10px 10px rgba(0, 0, 0, 0.5);
+}
+
+.button:active {
+	box-shadow: 2.5px 5px 5px rgba(0, 0, 0, 0.5);
 }
