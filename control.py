@@ -10,14 +10,13 @@ def index():
    return render_template('index.html')
 @app.route("/<deviceName>/")
 def action(deviceName):
-    if deviceName != 'btn':
-        if deviceName == 'button':
-            relay = button
-        GPIO.setmode(GPIO.BOARD)
-        GPIO.setup(relay, GPIO.OUT)
-        GPIO.output(relay, GPIO.LOW)
-        time.sleep(1)
-        GPIO.output(relay, GPIO.HIGH)
+    if deviceName == 'button':
+         relay = button
+    GPIO.setmode(GPIO.BOARD)
+    GPIO.setup(relay, GPIO.OUT)
+    GPIO.output(relay, GPIO.LOW)
+    time.sleep(1)
+    GPIO.output(relay, GPIO.HIGH)
     return render_template('index.html')
 if __name__ == '__main__':
     app.run(debug=True, port=80, host='0.0.0.0')
