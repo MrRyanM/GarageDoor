@@ -10,6 +10,7 @@ def index():
    return render_template('index.html')
 @app.route("/<deviceName>/")
 def action(deviceName):
+    relay = button
     if deviceName == 'button':
         relay = button
     GPIO.setmode(GPIO.BOARD)
